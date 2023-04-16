@@ -25,28 +25,18 @@
                 }
                 else
                 if (hour >= 9 && hour <= 10 && min <= 15 && min >= 15){
-                    document.getElementById("block1").classList.add("active");
                     document.getElementById("pause1").classList.add("active");
                 }
                 else
                 if (hour >= 10 && hour <= 12 && min >= 15 && min <= 15){
-                    document.getElementById("block1").classList.add("active");
-                    document.getElementById("pause1").classList.add("active");
                     document.getElementById("block2").classList.add("active");
                 }
                 else
                 if (hour == 12 && min <= 15 && min >= 45){
-                    document.getElementById("block1").classList.add("active");
-                    document.getElementById("pause1").classList.add("active");
-                    document.getElementById("block2").classList.add("active");
                     document.getElementById("pause2").classList.add("active");
                 }
                 else
                 if (hour >= 12 && hour <= 13 && min >= 45 && min <= 25){
-                    document.getElementById("block1").classList.add("active");
-                    document.getElementById("pause1").classList.add("active");
-                    document.getElementById("block2").classList.add("active");
-                    document.getElementById("pause2").classList.add("active");
                     document.getElementById("block3").classList.add("active");
                 }
             }
@@ -89,6 +79,10 @@
                 </summary>
                 details
             </details>
+            <div id="legend">
+                <span id="box" class="active"></span>
+                <span>aktuell</span>
+            </div>
         </div>
     </div>
 </body>
