@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportfest 2023 | PvH Neustadt (Dosse)</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script>
+        setInterval(showTime, 1500);
+        function showTime() 
+        {
+            let time = new Date();
+            //Zeit
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            currentTime = hour +":"+ min;
+            document.getElementById("time").innerHTML = currentTime;
+            if (hour >= 8 && hour <= 9 && min <=45){
+                document.getElementById("block1").classList.add("active");
+            }
+            else
+            if (hour >= 10 && hour <= 12 && min >=15 && min <= 15){
+                document.getElementById("block1").classList.add("active");
+                document.getElementById("block2").classList.add("active");
+            }
+            else
+            if (hour >= 12 && hour <= 13 && min >=45 && min <=25){
+                document.getElementById("block1").classList.add("active");
+                document.getElementById("block2").classList.add("active");
+                document.getElementById("block3").classList.add("active");
+            }
+        }
+        showTime();
+    </script>
+</head>
+<body>
+    <div id="mainpart">
+        <div id="heading">
+            <h1>Sportfest 2023</h1>
+        </div>
+        <div id="timerow">
+            <span id="thistime">Aktuelle Zeit:</span>
+            <span id="time">00:00</span>
+        </div>
+        <div class="blocks">
+            <details class="block" id="block1">
+                <summary class="head">
+                    <h2>Block 1 | <span class="small">08:00 - 09.45</span></h2><span class="expand center">+</span>
+                </summary>
+                details
+            </details>
+            <div class="block pause">
+                <h2 class="head">Pause</h2>
+            </div>
+            <details class="block" id="block2">
+                <summary class="head">
+                    <h2>Block 2 | <span class="small">10:15 - 12.15</span></h2><span class="expand center">+</span>
+                </summary>
+                details
+            </details>
+            <div class="block pause">
+                <h2 class="head">Mittagspause</h2>
+            </div>
+            <details class="block" id="block3">
+                <summary class="head">
+                    <h2>Block 3 | <span class="small">12:45 - 13:25</span></h2><span class="expand center">+</span>
+                </summary>
+                details
+            </details>
+        </div>
+    </div>
+</body>
+</html>
