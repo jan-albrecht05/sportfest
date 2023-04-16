@@ -81,7 +81,15 @@ details[open] .expand{
 .active{
     background-color: rgb(195, 255, 163);
 }
-
+#legend{
+    display: flex;
+    margin-top: .5rem;
+}
+#legend #box{
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: .5rem;
+}
 @media (max-width: 600px) {
     #mainpart{
         width: 90vw;
