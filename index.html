@@ -14,24 +14,28 @@
             //Zeit
             let hour = time.getHours();
             let min = time.getMinutes();
+            let day = time.getDate();
             hour = hour < 10 ? "0" + hour : hour;
             min = min < 10 ? "0" + min : min;
             currentTime = hour +":"+ min;
             document.getElementById("time").innerHTML = currentTime;
-            if (hour >= 8 && hour <= 9 && min <=45){
-                document.getElementById("block1").classList.add("active");
+            if (day == 17){
+                if (hour >= 8 && hour <= 9 && min <= 45){
+                    document.getElementById("block1").classList.add("active");
+                }
+                else
+                if (hour >= 10 && hour <= 12 && min >= 15 && min <= 15){
+                    document.getElementById("block1").classList.add("active");
+                    document.getElementById("block2").classList.add("active");
+                }
+                else
+                if (hour >= 12 && hour <= 13 && min >= 45 && min <= 25){
+                    document.getElementById("block1").classList.add("active");
+                    document.getElementById("block2").classList.add("active");
+                    document.getElementById("block3").classList.add("active");
+                }
             }
-            else
-            if (hour >= 10 && hour <= 12 && min >=15 && min <= 15){
-                document.getElementById("block1").classList.add("active");
-                document.getElementById("block2").classList.add("active");
-            }
-            else
-            if (hour >= 12 && hour <= 13 && min >=45 && min <=25){
-                document.getElementById("block1").classList.add("active");
-                document.getElementById("block2").classList.add("active");
-                document.getElementById("block3").classList.add("active");
-            }
+            
         }
         showTime();
     </script>
