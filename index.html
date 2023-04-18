@@ -14,8 +14,8 @@
             //Zeit
             let hour = time.getHours();
             //let hour = 13;      //10 Uhr
-            let min = time.getMinutes();
-            //let min = 46;       //Min: 14
+            //let min = time.getMinutes();
+            let min = 16;       //Min: 14
             let day = time.getDate();
             hour = hour < 10 ? "0" + hour : hour;
             min = min < 10 ? "0" + min : min;
@@ -28,7 +28,7 @@
                 }
                 else
                 //Pause 1
-                if ((hour == 9 || hour == 10) && (min <= 15 || min >= 45)){
+                if ((hour >= 9 && min >= 45 && hour <= 10 &&  min <= 15)){
                     document.getElementById("pause1").classList.add("active");
                     document.getElementById("block1").classList.add("finish");
                 }
