@@ -93,6 +93,14 @@ details[open] .expand{
     height: 1.1rem;
     margin-right: .5rem;
 }
+
+details[finish] summary,
+details.finish summary,
+details[finish]{
+    pointer-events: none; /* prevents click events */
+    user-select: none; /* prevents text selection */
+}
+
 @media (max-width: 600px) {
     #mainpart{
         width: 90vw;
