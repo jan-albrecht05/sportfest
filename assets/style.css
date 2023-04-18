@@ -81,6 +81,9 @@ details[open] .expand{
 .active{
     background-color: rgb(195, 255, 163);
 }
+.finish{
+    color: grey;
+}
 #legend{
     display: flex;
     margin-top: .5rem;
