@@ -28,26 +28,41 @@
                 }
                 else
                 //Pause 1
-                if ((hour >= 9) && (hour <= 10 && min <= 15)){
+                if ((hour == 9 || hour == 10) && (min <= 15 || min >= 45)){
                     document.getElementById("pause1").classList.add("active");
-                    //document.getElementById("block1").classList.add("finish");
+                    document.getElementById("block1").classList.add("finish");
                 }
                 else
                 //Block 2
                 if ((hour >= 10 && min > 15) && (hour < 12)){
-                    document.getElementById("block1").classList.add("active");
+                    document.getElementById("block1").classList.add("finish");
                     document.getElementById("pause1").classList.add("finish");
-                    document.getElementById("block2").classList.add("finish");
+                    document.getElementById("block2").classList.add("active");
                 }
                 else
                 //Pause 2
                 if (hour == 12 && min >= 15 && min <= 45){
+                    document.getElementById("block1").classList.add("finish");
+                    document.getElementById("pause1").classList.add("finish");
+                    document.getElementById("block2").classList.add("finish");
                     document.getElementById("pause2").classList.add("active");
                 }
                 else
                 //Block 3
-                if ((hour >= 12 && min >= 45)){
+                if ((hour >= 12 && min > 45) && (hour < 14 && min <= 25)){
+                    document.getElementById("block1").classList.add("finish");
+                    document.getElementById("pause1").classList.add("finish");
+                    document.getElementById("block2").classList.add("finish");
+                    document.getElementById("pause2").classList.add("finish");
                     document.getElementById("block3").classList.add("active");
+                }
+                else
+                if (hour >= 13 && min >= 25){
+                    document.getElementById("block1").classList.add("finish");
+                    document.getElementById("pause1").classList.add("finish");
+                    document.getElementById("block2").classList.add("finish");
+                    document.getElementById("pause2").classList.add("finish");
+                    document.getElementById("block3").classList.add("finish");
                 }
             }
         }
