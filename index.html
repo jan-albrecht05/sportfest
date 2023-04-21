@@ -28,15 +28,13 @@
                 if ((hour == 8 && min <= 59) || (hour == 9 && min <= 45)){
                     document.getElementById("block1").classList.add("active"); 
                 }
-                else{
-                    document.getElementById("block1").classList.remove("active");                    
+                else{                  
                     document.getElementById("block1").classList.add("finish");
                         //Pause 1
                     if ((hour == 9 && min <= 59) || (hour == 10 && min <= 14)){
                         document.getElementById("pause1").classList.add("active");
                     }
-                    else{
-                        document.getElementById("pause1").classList.remove("active");                    
+                    else{                    
                         document.getElementById("pause1").classList.add("finish");
                         //Block 2
                         if ((hour == 10 || hour == 11 && min <= 59) || (hour == 12 && min <= 14)){
