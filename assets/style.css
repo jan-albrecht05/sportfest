@@ -71,6 +71,7 @@ details[open] .expand{
 .block{
     border-bottom: 1px solid #bbb;
     margin-top: 1rem;
+    padding-left: .2rem;
 }
 .block:last-child{
     border-bottom: none;
