@@ -1,10 +1,16 @@
+:root{
+    --back: rgb(222, 222, 222);
+    --back2: #fff;
+    --font: rgb(25, 25, 25);
+}
+
 html{
     scroll-behavior: smooth;
     scrollbar-width: thin;
 }
 body{
-    background-color: rgb(222, 222, 222);
-    color: rgb(25, 25, 25);
+    background-color: var(--back);
+    color: var(--font);
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
 }
@@ -12,9 +18,10 @@ body{
     width: 60vw;
     margin-inline: auto;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    background-color: #fff;
+    background-color: var(--back2);
     filter: drop-shadow(#bbb 10px 10px 10px);
 }
 h1,h2,h3,h4,h5,h6{
@@ -37,7 +44,7 @@ h1,h2,h3,h4,h5,h6{
     position: sticky;
     top: 0;
     padding-top: .5rem;
-    background-color: #fff;
+    background-color: var(--back2);
     filter: drop-shadow(#bbb 0px 5px 10px);
 }
 #timerow #time{
@@ -92,6 +99,21 @@ details[open] .expand{
     width: 1.1rem;
     height: 1.1rem;
     margin-right: .5rem;
+}
+table{
+    background-color: var(--font);
+    width: 100%;
+}
+td{
+    background-color: var(--back2);
+    padding: .2rem;
+}
+.thead{
+    font-weight: bold;
+    font-size: 120%;
+}
+li{
+    margin-left: -1rem;
 }
 
 details[finish] summary,
