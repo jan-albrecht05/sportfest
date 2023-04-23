@@ -101,7 +101,6 @@ details[open] .expand{
     height: 1.1rem;
     margin-right: .5rem;
 }
-<<<<<<< HEAD
 table{
     background-color: var(--font);
     width: 100%;
@@ -117,9 +116,6 @@ td{
 li{
     margin-left: -1rem;
 }
-
-=======
->>>>>>> e5391b699e04ca7f1e544b751d96dc2a72d87cf0
 details[finish] summary,
 details.finish summary,
 details[finish]{
