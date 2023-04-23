@@ -6,65 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sportfest 2023 | PvH Neustadt (Dosse)</title>
     <link rel="stylesheet" href="/assets/style.css">
-    <script>
-            
-        setInterval(showTime, 1000);
-        function showTime() 
-        {
-            let time = new Date();
-            //Zeit
-            let hour = time.getHours();
-            //let hour = 10;      //09 Uhr
-            let min = time.getMinutes();
-            //let min = 26;       //Min: 46
-            let day = time.getDate();
-            hour = hour < 10 ? "0" + hour : hour;
-            min = min < 10 ? "0" + min : min;
-            currentTime = hour +":"+ min;
-            document.getElementById("time").innerHTML = currentTime;
-            
-            if (day >= 17){
-                //Block 1
-                if ((hour == 8 && min <= 59) || (hour == 9 && min <= 45)){
-                    document.getElementById("block1").classList.add("active"); 
-                }
-                else{
-                    document.getElementById("block1").classList.remove("active");                    
-                    document.getElementById("block1").classList.add("finish");
-                        //Pause 1
-                    if ((hour == 9 && min <= 59) || (hour == 10 && min <= 14)){
-                        document.getElementById("pause1").classList.add("active");
-                    }
-                    else{
-                        document.getElementById("pause1").classList.remove("active");                    
-                        document.getElementById("pause1").classList.add("finish");
-                        //Block 2
-                        if ((hour == 10 || hour == 11 && min <= 59) || (hour == 12 && min <= 14)){
-                            document.getElementById("block2").classList.add("active");
-                        }
-                        else{
-                            document.getElementById("block2").classList.add("finish"); 
-                            //Pause 2
-                            if (hour == 12 && min >= 15 && min <= 44){
-                                document.getElementById("pause2").classList.add("active");
-                            }
-                            else{
-                                document.getElementById("pause2").classList.add("finish"); 
-                                //Block 3
-                                if ((hour == 12 && min <= 59) || (hour == 13 && min <= 25)){
-                                    document.getElementById("block3").classList.add("active");
-                                }
-                                else{
-                                    document.getElementById("block3").classList.add("finish"); 
-                                }
-                            }
-                        }
-                    }                  
-                }
-            }
-        }
-        showTime();
-    </script>
+    <script src="/assets/app.js"></script>
 </head>
 <body>
     <div id="mainpart">
@@ -76,35 +18,123 @@
             <span id="time">00:00</span>
         </div>
         <div class="blocks">
+            <!--Block 1-->
             <details class="block" id="block1">
                 <summary class="head">
                     <h2>Block 1 | <span class="small">08:00 - 09:45</span></h2><span class="expand center">+</span>
                 </summary>
-                details
+                <table>
+                    <tr class="thead">
+                        <td>7./8. Klasse</td>
+                        <td>9./11. Klasse</td>
+                    </tr>
+                    <tr class="tbody">
+                        <td>
+                            <h3>Sportspiele</h3>
+                            <ul>
+                                <li>Volleyball</li>
+                                <li>Zweifelderball</li>
+                                <li>Streetball</li>
+                                <li>Tischtennis</li>
+                                <li>Badminton</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <h3>Leichtathletik</h3>
+                            <ul>
+                                <li>100m</li>
+                                <li>Weitsprung</li>
+                                <li>Kugelstoßen</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
             </details>
+            <!--Pause 1-->
             <div class="block pause" id="pause1">
                 <h2 class="head">Pause</h2>
             </div>
+            <!--Block 2-->
             <details class="block" id="block2">
                 <summary class="head">
                     <h2>Block 2 | <span class="small">10:15 - 12:15</span></h2><span class="expand center">+</span>
                 </summary>
-                details
+                <table>
+                    <tr class="thead">
+                        <td>7./8. Klasse</td>
+                        <td>9./11. Klasse</td>
+                    </tr>
+                    <tr class="tbody">
+                        <td>
+                            <h3>Leichtathletik</h3>
+                            <ul>
+                                <li>100m</li>
+                                <li>Weitsprung</li>
+                                <li>Kugelstoßen</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <h3>Sportspiele</h3>
+                            <ul>
+                                <li>Volleyball</li>
+                                <li>Zweifelderball</li>
+                                <li>Streetball</li>
+                                <li>Tischtennis</li>
+                                <li>Badminton</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
             </details>
+            <!--Pause 2-->
             <div class="block pause" id="pause2">
                 <h2 class="head">Mittagspause</h2>
             </div>
+            <!--Block 3-->
             <details class="block" id="block3">
                 <summary class="head">
                     <h2>Block 3 | <span class="small">12:45 - 13:25</span></h2><span class="expand center">+</span>
                 </summary>
-                details
+                <table>
+                    <tr class="thead">
+                        <td>7./8. Klasse</td>
+                        <td>9./11. Klasse</td>
+                    </tr>
+                    <tr class="tbody">
+                        <td>
+                            <h3>Staffellauf</h3>
+                            7. Klasse
+                            <ul>
+                                <li>1. Lauf: 13.05</li>
+                                <li>2. Lauf: 13.15</li>
+                            </ul>
+                            8. Klasse
+                            <ul>
+                                <li>1. Lauf: 13.25</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <h3>Staffellauf</h3>
+                            9. Klasse
+                            <ul>
+                                <li>1. Lauf: 12.45</li>
+                            </ul>
+                            11. Klasse
+                            <ul>
+                                <li>1. Lauf: 12.55</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
             </details>
+            <div class="block pause" id="block4">
+                <h2 class="head">Siegerehrung | <span class="small">ab 13:45</h2>
+            </div>
             <div id="legend">
                 <span id="box" class="active"></span>
                 <span>aktuell</span>
                 <span id="box" style="background-color: grey; margin-left: 1.5rem"></span>
-                <span>fertig</span>
+                <span>abgelaufen</span>
             </div>
         </div>
     </div>
