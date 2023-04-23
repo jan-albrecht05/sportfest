@@ -78,6 +78,7 @@ details[open] .expand{
 .block{
     border-bottom: 1px solid #bbb;
     margin-top: 1rem;
+    padding-left: .2rem;
 }
 .block:last-child{
     border-bottom: none;
@@ -100,6 +101,7 @@ details[open] .expand{
     height: 1.1rem;
     margin-right: .5rem;
 }
+<<<<<<< HEAD
 table{
     background-color: var(--font);
     width: 100%;
@@ -116,6 +118,8 @@ li{
     margin-left: -1rem;
 }
 
+=======
+>>>>>>> e5391b699e04ca7f1e544b751d96dc2a72d87cf0
 details[finish] summary,
 details.finish summary,
 details[finish]{
