@@ -45,6 +45,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     position: sticky;
     top: 0;
+    z-index: 5;
     padding-top: .5rem;
     background-color: var(--back2);
     filter: drop-shadow(#bbb 0px 5px 10px);
