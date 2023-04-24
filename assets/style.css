@@ -3,7 +3,6 @@
     --back2: #fff;
     --font: rgb(25, 25, 25);
 }
-
 html{
     scroll-behavior: smooth;
     scrollbar-width: thin;
