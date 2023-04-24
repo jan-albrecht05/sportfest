@@ -27,6 +27,9 @@ body{
 h1,h2,h3,h4,h5,h6{
     margin-top: 0rem;
 }
+#subhead{
+    margin-top: -1rem;
+}
 .center{
     display: flex;
     justify-content: center;
@@ -127,5 +130,14 @@ details[finish]{
     #mainpart{
         width: 90vw;
         margin-top: 1rem;
+    }
+}
+@media (min-width: 600px) {
+    #heading{
+        display: flex;
+    }
+    #subhead{
+        margin-top: 0.5rem;
+        margin-left: auto;
     }
 }
