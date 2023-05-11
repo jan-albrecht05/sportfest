@@ -61,3 +61,12 @@ setInterval(showTime, 1000);
             }
         }
 showTime();
+
+function showkarte(){
+    document.getElementById("karte").style.display = "block";
+    document.getElementById("btn").style.filter = "none";
+}
+function hidekarte(){
+    document.getElementById("karte").style.display = "none";
+    document.getElementById("btn").style.filter = "drop-shadow(#bbb 10px 10px 10px)";
+}

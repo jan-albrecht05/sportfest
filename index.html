@@ -11,6 +11,10 @@
     <meta name="description" content="Alle Informationen zum Sportfest der Prinz-von-Homburg Schule in Neustadt (Dosse).">
 </head>
 <body>
+    <div id="btn" onclick="showkarte()">
+        Lageplan >
+    </div>
+    
     <div id="mainpart">
         <div id="heading">
             <h1>Sportfest</h1>
@@ -134,10 +138,36 @@
                 <h2 class="head">Siegerehrung | <span class="small">ab 13:45</h2>
             </div>
             <div id="legend">
-                <span id="box" class="active"></span>
+                <span class="box active"></span>
                 <span>aktuell</span>
-                <span id="box" style="background-color: grey; margin-left: 1.5rem"></span>
+                <span class="box" style="background-color: grey; margin-left: 1.5rem"></span>
                 <span>abgelaufen</span>
+            </div>
+        </div>
+    </div>
+    <div id="karte">
+        <button id="X" onclick="hidekarte()">X</button>
+        <img src="/assets/karte.png" id="karteimg">
+        <div id="legend2">
+            <div class="part">
+                <span class="box red"></span>
+                <span>Kugelstoßen</span>
+                <span class="box orange"></span>
+                <span>Sprint</span>
+                <span class="box lgreen"></span>
+                <span>Weitsprung</span>
+            </div>
+            <div class="part">
+                <span class="box yellow"></span>
+                <span>Volleyball</span>
+                <span class="box blue"></span>
+                <span>Zweifelderball</span>
+            </div>
+            <div class="part">
+                <span class="box pink"></span>
+                <span>Tischtennis</span>
+                <span class="box azur"></span>
+                <span>Badminton</span>
             </div>
         </div>
     </div>

@@ -13,7 +13,8 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
 }
-#mainpart{
+#mainpart,
+#karte{
     width: 60vw;
     margin-inline: auto;
     margin-top: 2rem;
@@ -99,10 +100,11 @@ details[open] .expand{
     display: flex;
     margin-top: .5rem;
 }
-#legend #box{
+.box{
     width: 1.1rem;
     height: 1.1rem;
     margin-right: .5rem;
+    display: inline-block;
 }
 table{
     background-color: var(--font);
@@ -125,10 +127,86 @@ details[finish]{
     pointer-events: none; /* prevents click events */
     user-select: none; /* prevents text selection */
 }
+#btn{
+    background-color: var(--back2);
+    width: 8rem;
+    padding: .1rem .5rem;
+    filter: drop-shadow(#bbb 10px 10px 10px);
+    font-size: 150%;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    margin-bottom: 2rem;
+    border: 1px solid var(--font);
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+}
+#karte{
+    display: none;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 5rem;
+    background-color: var(--back2);
+    filter: drop-shadow(#bbb 10px 10px 10px);
+}
+#karteimg{
+    width: 95%;
+    margin-top: 3%;
+    height: auto;
+    z-index: 6;
+}
+#X{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    margin-top: 2.5rem;
+    margin-right: 2.5rem;
+    outline: none;
+    border: 1px solid #fff;
+    background: transparent;
+    font-size: 120%;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#legend2{
+    text-align: left;
+}
+#legend2 .box{
+    margin-left: .5rem;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: #ff9d00;
+}
+.lgreen{
+    background-color: #1eff00;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: #0076ff;
+}
+.pink{
+    background-color: #ff00eb;
+}
+.azur{
+    background-color: #00d4ff;
+}
 
 @media (max-width: 600px) {
-    #mainpart{
+    #mainpart,
+    #karte{
         width: 90vw;
+        margin-top: 1rem;
+    }
+    #X{
+        margin-right: 1rem;
         margin-top: 1rem;
     }
 }
