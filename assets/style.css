@@ -12,6 +12,7 @@ body{
     color: var(--font);
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
+    padding-bottom: 2rem;
 }
 #mainpart,
 #karte{
