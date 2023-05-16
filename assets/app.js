@@ -4,10 +4,11 @@ setInterval(showTime, 1000);
             let time = new Date();
             //Zeit
             let hour = time.getHours();
-            //let hour = 14;      //09 Uhr
+            //let hour = 10;      //09 Uhr
             let min = time.getMinutes();
-            //let min = 00;       //Min: 46
+            //let min = 15;       //Min: 46
             let day = time.getDate();
+            //let day = 17;
             hour = hour < 10 ? "0" + hour : hour;
             min = min < 10 ? "0" + min : min;
             currentTime = hour +":"+ min;
