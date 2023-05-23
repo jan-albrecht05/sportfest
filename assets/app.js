@@ -14,7 +14,7 @@ setInterval(showTime, 1000);
             currentTime = hour +":"+ min;
             document.getElementById("time").innerHTML = currentTime;
             
-            if (day == 17){
+            if (day == 32){
                 //Block 1
                 if ((hour == 8 && min <= 59) || (hour == 9 && min <= 45)){
                     document.getElementById("block1").classList.add("active"); 
