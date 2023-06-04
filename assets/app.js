@@ -1,3 +1,10 @@
+
+function activateModal(){
+    document.getElementById("modal").showModal();
+}
+function deactivateModal(){
+    document.getElementById("modal").close();
+}
 setInterval(showTime, 1000);
         function showTime() 
         {

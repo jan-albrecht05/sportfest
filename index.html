@@ -11,11 +11,16 @@
     <meta name="author" content="Jan Albrecht">
     <meta name="description" content="Alle Informationen zum Sportfest der Prinz-von-Homburg Schule in Neustadt (Dosse).">
 </head>
-<body>
+<body onload="activateModal()">
     <div id="btn" onclick="showkarte()">
         Lageplan >
     </div>
-    
+    <dialog id="modal">
+        Das Sportfest ist vorüber!
+        <div>
+            <button id="mbtn"onclick="deactivateModal()">schließen</button>
+        </div>
+    </dialog>
     <div id="mainpart">
         <div id="heading">
             <h1>Sportfest</h1>

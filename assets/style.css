@@ -141,6 +141,7 @@ details[finish]{
     border: 1px solid var(--font);
     border-left: none;
     border-radius: 0px 5px 5px 0px;
+    user-select: none;
 }
 #karte{
     display: none;
@@ -199,6 +200,20 @@ details[finish]{
 .azur{
     background-color: #00d4ff;
 }
+#modal{
+    font-size: 200%;
+    text-align: center;
+}
+#mbtn{
+    background-color: white;
+    border: black solid 2px;
+    margin-top: 1rem;
+    outline: none;
+    font-size: 90%;
+    padding: 2px 10px;
+    text-transform: capitalize;
+    user-select: none;
+}
 
 @media (max-width: 600px) {
     #mainpart,
@@ -209,6 +224,10 @@ details[finish]{
     #X{
         margin-right: 1rem;
         margin-top: 1rem;
+    }
+    #modal{
+        max-width: 60%;
+        font-size: 180%;
     }
 }
 @media (min-width: 600px) {
